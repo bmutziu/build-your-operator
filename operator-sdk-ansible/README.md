@@ -14,7 +14,7 @@ Then, you can add logic to `roles/hazelcast/tasks/main.yaml` and `role/hazelcast
 #### 2. Dockerize operator application and push it into Docker Hub
 
 ```
-docker build -t leszko/hazelcast-operator:ansible . && docker push leszko/hazelcast-operator:ansible
+docker build -t bmutziu/hazelcast-operator:ansible . && docker push bmutziu/hazelcast-operator:ansible
 ```
 
 #### 3. Create Hazelcast CRD (Custom Role Definition)
@@ -26,7 +26,7 @@ make install
 #### 4. Deploy an operator
 
 ```
-make deploy IMG=leszko/hazelcast-operator:ansible
+make deploy IMG=bmutziu/hazelcast-operator:ansible
 ```
 
 Check that the operator is running with the following command.

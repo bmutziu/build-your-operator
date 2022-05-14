@@ -1,8 +1,16 @@
 domain: my.domain
-layout: ansible.sdk.operatorframework.io/v1
+layout:
+- ansible.sdk.operatorframework.io/v1
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
 projectName: operator-ansible
 resources:
-- group: hazelcast
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: my.domain
+  group: hazelcast
   kind: Hazelcast
   version: v1
-version: 3-alpha
+version: "3"

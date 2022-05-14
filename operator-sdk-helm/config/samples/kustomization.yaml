@@ -1,4 +1,5 @@
 ## Append samples you want in your CSV to this file as resources ##
 resources:
 - hazelcast_v1_.yaml
+- hazelcast_v1_hazelcast.yaml
 # +kubebuilder:scaffold:manifestskustomizesamples

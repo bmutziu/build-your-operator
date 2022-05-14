@@ -51,4 +51,28 @@ rules:
   resources:
   - "deployments"
 
+##
+## Rules for hazelcast.my.domain/v1, Kind: Hazelcast
+##
+- apiGroups:
+  - hazelcast.my.domain
+  resources:
+  - hazelcasts
+  - hazelcasts/status
+  - hazelcasts/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- verbs:
+  - "*"
+  apiGroups:
+  - "apps"
+  resources:
+  - "deployments"
+
 # +kubebuilder:scaffold:rules

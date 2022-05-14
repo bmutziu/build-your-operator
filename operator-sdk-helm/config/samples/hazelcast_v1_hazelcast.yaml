@@ -4,6 +4,4 @@ metadata:
   name: hazelcast-sample
 spec:
   # Default values copied from <project_dir>/helm-charts/hazelcast/values.yaml
-  size: 1
-  
-  
+  size: 3

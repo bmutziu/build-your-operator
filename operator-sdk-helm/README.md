@@ -14,7 +14,7 @@ operator-sdk create api --group=hazelcast --version=v1 --helm-chart=./chart
 #### 2. Dockerize operator application and push it into Docker Hub
 
 ```
-docker build -t leszko/hazelcast-operator:helm . && docker push leszko/hazelcast-operator:helm
+docker build -t bmutziu/hazelcast-operator:helm . && docker push bmutziu/hazelcast-operator:helm
 ```
 
 #### 3. Create Hazelcast CRD (Custom Role Definition)
@@ -26,7 +26,7 @@ make install
 #### 4. Deploy an operator
 
 ```
-make deploy IMG=leszko/hazelcast-operator:helm
+make deploy IMG=bmutziu/hazelcast-operator:helm
 ```
 
 Check that the operator is running with the following command.
