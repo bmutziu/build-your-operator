@@ -27,8 +27,8 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	hazelcastv1 "github.com/leszko/hazelcast-operator/api/v1"
-	"github.com/leszko/hazelcast-operator/controllers"
+	hazelcastv1 "github.com/bmutziu/hazelcast-operator/api/v1"
+	"github.com/bmutziu/hazelcast-operator/controllers"
 	// +kubebuilder:scaffold:imports
 )
 
@@ -67,6 +67,14 @@ func main() {
 		os.Exit(1)
 	}
 
+	if err = (&controllers.HazelcastReconciler{
+		Client: mgr.GetClient(),
+		Log:    ctrl.Log.WithName("controllers").WithName("Hazelcast"),
+		Scheme: mgr.GetScheme(),
+	}).SetupWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "Hazelcast")
+		os.Exit(1)
+	}
 	if err = (&controllers.HazelcastReconciler{
 		Client: mgr.GetClient(),
 		Log:    ctrl.Log.WithName("controllers").WithName("Hazelcast"),

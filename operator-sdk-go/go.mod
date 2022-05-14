@@ -1,4 +1,4 @@
-module github.com/leszko/hazelcast-operator
+module github.com/bmutziu/hazelcast-operator
 
 go 1.13
 

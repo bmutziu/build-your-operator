@@ -5,7 +5,7 @@
 Generate a scaffold for the operator.
 
 ```
-operator-sdk init --repo=github.com/leszko/hazelcast-operator
+operator-sdk init --repo=github.com/bmutziu/hazelcast-operator
 operator-sdk create api --version v1 --group=hazelcast --kind Hazelcast --resource=true --controller=true
 ```
 
@@ -14,7 +14,7 @@ Add the logic to `api/v1/hazelcast-types.go` and `controllers/hazelcast_controll
 #### 2. Dockerize operator application and push it into Docker Hub
 
 ```
-docker build -t leszko/hazelcast-operator:go . && docker push leszko/hazelcast-operator:go
+docker build -t bmutziu/hazelcast-operator:go . && docker push bmutziu/hazelcast-operator:go
 ```
 
 #### 3. Create Hazelcast CRD (Custom Role Definition)
@@ -26,7 +26,7 @@ make install
 #### 4. Deploy an operator
 
 ```
-make deploy IMG=leszko/hazelcast-operator:go
+make deploy IMG=bmutziu/hazelcast-operator:go
 ```
 
 Check that the operator is running with the following command.

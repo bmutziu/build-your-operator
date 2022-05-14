@@ -28,20 +28,20 @@ type HazelcastSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of Hazelcast. Edit Hazelcast_types.go to remove/update
+	// Foo is an example field of Hazelcast. Edit hazelcast_types.go to remove/update
 	Size int32 `json:"size,omitempty"`
 }
 
 // HazelcastStatus defines the observed state of Hazelcast
 type HazelcastStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this
+	// Important: Run "make" to regenerate code after modifying this file
 
 	Nodes []string `json:"nodes,omitempty"`
 }
 
-// +kubebuilder:object:root=true
-// +kubebuilder:subresource:status
+//+kubebuilder:object:root=true
+//+kubebuilder:subresource:status
 
 // Hazelcast is the Schema for the hazelcasts API
 type Hazelcast struct {
@@ -52,7 +52,7 @@ type Hazelcast struct {
 	Status HazelcastStatus `json:"status,omitempty"`
 }
 
-// +kubebuilder:object:root=true
+//+kubebuilder:object:root=true
 
 // HazelcastList contains a list of Hazelcast
 type HazelcastList struct {

@@ -30,7 +30,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	hazelcastv1 "github.com/leszko/hazelcast-operator/api/v1"
+	hazelcastv1 "github.com/bmutziu/hazelcast-operator/api/v1"
 	// +kubebuilder:scaffold:imports
 )
 

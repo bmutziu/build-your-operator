@@ -1,11 +1,18 @@
 domain: my.domain
-layout: go.kubebuilder.io/v2
-projectName: hazelcast-operator
-repo: github.com/leszko/hazelcast-operator
-resources:
-- group: hazelcast
-  kind: Hazelcast
-  version: v1
-version: 3-alpha
+layout:
+- go.kubebuilder.io/v2
 plugins:
   go.sdk.operatorframework.io/v2-alpha: {}
+projectName: hazelcast-operator
+repo: github.com/bmutziu/hazelcast-operator
+resources:
+- api:
+    crdVersion: v1beta1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: hazelcast
+  kind: Hazelcast
+  path: github.com/bmutziu/hazelcast-operator/api/v1
+  version: v1
+version: "3"
