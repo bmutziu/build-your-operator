@@ -13,6 +13,6 @@ spec:
         app: operator
     spec:
       containers:
-        - image: leszko/hazelcast-operator:java
+        - image: bmutziu/hazelcast-operator:java
           name: hazelcast-operator
           imagePullPolicy: Always

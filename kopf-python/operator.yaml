@@ -13,6 +13,6 @@ spec:
         app: operator
     spec:
       containers:
-        - image: leszko/hazelcast-operator:kopf
+        - image: bmutziu/hazelcast-operator:kopf
           name: hazelcast-operator
           imagePullPolicy: Always

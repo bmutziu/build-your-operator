@@ -19,12 +19,12 @@ mvn package
 
 ##### 2.1. Standard build
 ```
-docker build -f src/main/docker/Dockerfile.jvm -t leszko/hazelcast-operator:java . && docker push leszko/hazelcast-operator:java
+docker build -f src/main/docker/Dockerfile.jvm -t bmutziu/hazelcast-operator:java . && docker push bmutziu/hazelcast-operator:java
 ```
 
 ##### 2.2. Native build
 ```
-docker build -f src/main/docker/Dockerfile.native -t leszko/hazelcast-operator:java-native . && docker push leszko/hazelcast-operator:java-native
+docker build -f src/main/docker/Dockerfile.native -t bmutziu/hazelcast-operator:java-native . && docker push bmutziu/hazelcast-operator:java-native
 ```
 
 #### 3. Create Hazelcast CRD (Custom Role Definition) and RBAC (Cluster Role and Cluster Role Binding)

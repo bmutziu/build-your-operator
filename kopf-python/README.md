@@ -6,7 +6,7 @@ The whole logic of the operator is included in the file `operator.py`.
 
 #### 2. Dockerize operator application and push it into Docker Hub
 ```
-docker build -t leszko/hazelcast-operator:kopf . && docker push leszko/hazelcast-operator:kopf
+docker build -t bmutziu/hazelcast-operator:kopf . && docker push bmutziu/hazelcast-operator:kopf
 ```
 
 #### 3. Create Hazelcast CRD (Custom Role Definition) and RBAC (Cluster Role and Cluster Role Binding)
